@@ -1,0 +1,73 @@
+{
+  "name": "replay-aws-dlq",
+  "version": "0.0.0",
+  "description": "Re-drive dead letter queue messages to another queue",
+  "homepage": "",
+  "author": {
+    "name": "Garry Yao",
+    "email": "yaojun85@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "lib"
+  ],
+  "bin": "./cli.js",
+  "main": "lib/index.js",
+  "keywords": [
+    ""
+  ],
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-xo": "^0.25.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.2.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.2"
+  },
+  "engines": {
+    "npm": ">= 4.0.0",
+    "node": ">= 10.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest"
+  },
+  "repository": "garryyao/replay-aws-dlq",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "joi": "^14.3.1",
+    "sqs-consumer": "^5.3.0",
+    "sqs-producer": "^1.6.3"
+  }
+}
