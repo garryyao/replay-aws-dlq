@@ -9,7 +9,8 @@
     "url": ""
   },
   "files": [
-    "lib"
+    "lib",
+    "cli.js"
   ],
   "bin": "./cli.js",
   "main": "lib/index.js",
