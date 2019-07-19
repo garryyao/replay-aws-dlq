@@ -15,9 +15,13 @@
   "bin": "./cli.js",
   "main": "lib/index.js",
   "keywords": [
-    ""
+    "aws",
+    "sqs",
+    "dead letter queue",
+    "re-process"
   ],
   "devDependencies": {
+    "aws-sdk-mock": "^4.5.0",
     "eslint": "^5.9.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-config-xo": "^0.25.0",
